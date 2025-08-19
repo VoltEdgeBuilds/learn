@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="./js/supabase.js"></script>
+</head>
+<body>
+    <div class="course-page-layout">
+        <div class="course-intro-section" id="courseIntro">
+            <div class="intro-left">
+                <img id="courseThumbnail" src="" alt="Course Thumbnail">
+                <button id="startLearningBtn" class="btn-primary">Start Learning Now →</button>
+            </div>
+            <div class="intro-right">
+                <h2 id="courseTitle"></h2>
+                <div class="course-meta">
+                    <p><strong>Duration:</strong> <span id="courseDuration"></span></p>
+                    <p><strong>Total Videos:</strong> <span id="courseLessonsCount"></span></p>
+                </div>
+                <div class="course-learnings">
+                    <h3>What You'll Learn</h3>
+                    <ul id="courseLearningPoints"></ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="course-description-section">
+            <h3>Course Description</h3>
+            <p id="courseDescription"></p>
+        </section>
+
+        <div class="course-player-section hidden" id="coursePlayer">
+            <div class="player-sidebar">
+                <div class="player-sidebar-header">
+                    <h3 id="sidebarCourseTitle"></h3>
+                    <a href="dashboard.html" class="back-link">Back to Courses</a>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                    <span id="progressText">0% Complete</span>
+                </div>
+                <button id="certificateBtn" class="btn-certificate hidden" onclick="window.location.href='index.html'">Get Certificate</button>
+                <ul id="lessonList" class="lesson-list"></ul>
+            </div>
+            <div class="player-content">
+                <div class="video-container">
+                    <iframe id="videoPlayer" width="100%" height="480" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="lesson-details">
+                    <h3 id="lessonTitle"></h3>
+                    <p id="lessonDescription"></p>
+                    <div class="lesson-actions">
+                        <button id="completeLessonBtn" class="btn-primary">Mark as Completed</button>
+                        <button id="incompleteLessonBtn" class="btn-secondary hidden">Mark as Not Completed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/course.js" defer></script>
+</body>
+</html>

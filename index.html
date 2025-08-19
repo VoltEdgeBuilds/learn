@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltEdge Auth</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@20/build/css/intlTelInput.css" />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@20/build/js/intlTelInput.min.js"></script>
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <div id="phone-form" class="auth-form">
+                <img src="https://assets-global.website-files.com/64b5815616f73187c2b66d86/64c3c3a9108c35f2095f3299_logo.svg" alt="VoltEdge Logo" class="logo">
+                <h3>Enter Phone</h3>
+                <div class="iti-container">
+                    <input type="tel" id="phone" placeholder="+91XXXXXXXXXX" required />
+                </div>
+                <button type="submit" id="nextBtn">Next</button>
+            </div>
+
+            <form id="signup-form" class="auth-form hidden">
+                <h3>Create Account</h3>
+                <input type="text" id="fname" placeholder="First name" required />
+                <input type="text" id="lname" placeholder="Last name" required />
+                <input type="email" id="email" placeholder="example@gmail.com" required />
+                <div class="iti-container">
+                    <input type="tel" id="signup-phone" readonly />
+                </div>
+                <select id="user-role" required>
+                    <option value="">What represents you the best?</option>
+                    <option value="student">Student</option>
+                    <option value="professional">Professional</option>
+                    <option value="other">Other</option>
+                </select>
+                <input type="password" id="pin" placeholder="4-digit PIN" pattern="\d{4}" maxlength="4" required />
+                <input type="password" id="confirm-pin" placeholder="Confirm 4-digit PIN" pattern="\d{4}" maxlength="4" required />
+                <button type="submit">Sign Up</button>
+                <a href="#" id="login-link">Already have an account? Login</a>
+            </form>
+
+            <form id="pin-form" class="auth-form hidden">
+                <h3>Enter PIN</h3>
+                <input type="password" id="login-pin" placeholder="4-digit PIN" pattern="\d{4}" maxlength="4" required />
+                <button type="submit">Login</button>
+                <a href="#" id="signup-link">Don't have an account? Sign Up</a>
+            </form>
+        </div>
+        <div class="social-link">
+            <a href="https://t.me/yourtechcommunity" target="_blank">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-telegram-2752055-2284814.png" alt="Telegram" class="telegram-icon">
+                Join Our Tech Community
+            </a>
+        </div>
+    </div>
+    <script type="module" src="./js/auth.js" defer></script>
+</body>
+</html>

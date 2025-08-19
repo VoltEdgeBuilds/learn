@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="logo">VoltEdge</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Courses</a></li>
+                    <li><a href="#">My Learning</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="profile-section">
+                <span>MUHAMMED AMEEN</span>
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-bar">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for a course">
+                </div>
+                <div class="language-select-container">
+                    <select id="languageSelect">
+                        <option value="all">Malayalam</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <section class="banner-section">
+                <h2>Want to become a Game Developer?</h2>
+                <p>kickstart your career with Game Development Course</p>
+                <img src="img/mario.jpg" alt="Game Development Banner" class="banner-image">
+            </section>
+
+            <section class="filter-section">
+                <button data-category="all" class="filter-btn active">All</button>
+                <button data-category="Cyber Security" class="filter-btn">Cyber Security</button>
+                <button data-category="Data Structure" class="filter-btn">Data Structure</button>
+                <button data-category="Full Stack Development" class="filter-btn">Full Stack Development</button>
+                <button data-category="Game Development" class="filter-btn">Game Development</button>
+                <button data-category="Mobile App Development" class="filter-btn">Mobile App Development</button>
+                <button data-category="Programming" class="filter-btn">Programming</button>
+                <button data-category="UI Development" class="filter-btn">UI Development</button>
+            </section>
+
+            <section id="coursesContainer" class="courses-grid"></section>
+        </main>
+    </div>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
